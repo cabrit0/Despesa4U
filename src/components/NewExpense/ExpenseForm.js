@@ -38,10 +38,12 @@ const ExpenseForm = (props) => {
 
     const expenseData = {
       title: inputTitle,
-      amount: inputAmount,
+      amount: +inputAmount,
       date: new Date(inputDate),
     };
     props.onSaveExpenseData(expenseData);
+
+    //localStorage.setItem("NewExpense", JSON.stringify(expenseData));
 
     setInputTitle("");
     setInputAmount("");
